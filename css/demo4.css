@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: black; background: white;
+}
+
+::selection {
+  color: black; background: white;
+}
+
+body {
+	font-family: 'Roboto', 'Avenir Next', sans-serif;
+	/* color: #fff; */
+	/* background: #333; */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+
+a {
+	text-decoration: none;
+	color: #fff;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #b8b8b8;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Icons */
+
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+/* Header */
+
+.codrops-header {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	padding: 0.8em 0.75em;
+	text-align: left;
+}
+
+.codrops-header__title {
+	font-size: 1em;
+	margin: 0;
+}
+
+.codrops-header__demos {
+	margin: 0 1em;
+	padding: 0 1em;
+}
+
+.codrops-header__demos a {
+	margin-right: 10px;
+	white-space: nowrap;
+	font-style: italic;
+}
+
+.codrops-header__demos a.current-demo {
+	color: #b8b8b8;
+}
+
+.message {
+	background: #ed6f83;
+	color: #fff;
+	padding: 0.5em;
+	font-weight: bold;
+	font-size: 0.85em;
+	flex: none;
+	display: none;
+}
+
+.no-cssmask .message {
+	display: block;
+}
+
+
+
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width:500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
+}
+
+
+/* Content */
+
+.content {
+	padding: 3em 0;
+}
+
+@media screen and (max-width: 40em) {
+	.codrops-header {
+		text-align: center;
+		display: block;
+	}
+	.codrops-header__demos {
+		padding: 1em;
+	}
+}
